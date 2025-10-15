@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is part of the Forms Project in The Odin Project’s Ruby on Rails Curriculum. Find it at https://www.theodinproject.com
 
 Things you may want to cover:
 
-* Ruby version
+- Ruby version - 3.4.2
 
-* System dependencies
+- Rails version - 8.0.3
 
-* Configuration
+- System dependencies
 
-* Database creation
+- Configuration
 
-* Database initialization
+- Database creation
 
-* How to run the test suite
+- Database initialization
 
-* Services (job queues, cache servers, search engines, etc.)
+- How to run the test suite
 
-* Deployment instructions
+- Services (job queues, cache servers, search engines, etc.)
 
-* ...
+- Deployment instructions
+
+- ...
