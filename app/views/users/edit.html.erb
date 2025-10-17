@@ -1,0 +1,43 @@
+<!-- <!DOCTYPE html>
+
+<html>
+    <head></head>
+    <body>
+        <form action="/users" method="post" accept-charset="UTF-8" data-turbo= false>
+            <input type="hidden" name = "authenticity_token" value=<%=form_authenticity_token%>>
+            <label for="username">Username:</label>
+            <input type="text" id="uname" name="user[username]">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="user[email]">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="user[password]">
+            <button> Submit</button>
+        </form>
+    </body>
+</html> -->
+
+<!--<%= form_tag("/users", method: "post", data: {turbo:true}) do %>
+<%= label_tag :username, "Username" %>
+<%= text_field_tag "user[username]"%>
+<%= label_tag :email, "Email"%>
+<%= email_field_tag "user[email]"%>
+<%= label_tag :password, "Password"%>
+<%= password_field_tag "user[password]"%>
+<%= submit_tag "Submit" %>
+<% end %> -->
+<% if @user.errors.any? %>
+<% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+<% end %>
+
+<%= form_with model: @user do |user|%>
+<%= user.label :username%>
+<%= user.text_field :username, placeholder: "Enter your username" %>
+<%= user.label :email%>
+<%= user.email_field :email , placeholder: "example@gmail.com"%>
+<%= user.label :password%>
+<%= user.password_field :password%>
+<%= user.submit%>
+<% end%>
